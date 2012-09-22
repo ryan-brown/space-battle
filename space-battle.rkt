@@ -270,17 +270,17 @@
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 1 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
 255 255 -1 -1 2 1 #"\0"
 0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 200 0 0 0 0 0 -1 -1 4 1
-#"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 200 0 0 0 0
+0 -1 -1 4 1 #"\0"
 0 -1 1 #"\0"
-1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 255 255 0 -1 -1 2
-1 #"\0"
+1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 1 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
+255 0 -1 -1 2 1 #"\0"
 0 71 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
 -1 -1 2 1 #"\0"
 0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 100 0 0 0 0 -1
--1           0 3171 0 17 3 85
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 100 0 0 0
+0 -1 -1           0 3160 0 17 3 85
 (
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -354,10 +354,11 @@
  #";; THE BEER-WARE LICENSE:                                           "
  #"  ;;"
 ) 0 0 22 29 1 #"\n"
-0 0 17 3 14 #";; Ryan Brown "
-0 0 17 3 58
-#"wrote this file. As long as you retain this notice you  ;;"
-0 0 22 29 1 #"\n"
+0 0 17 3 72
+(
+ #";; Ryan Brown wrote this file. As long as you retain this notice you"
+ #"  ;;"
+) 0 0 22 29 1 #"\n"
 0 0 17 3 3 #";; "
 0 0 17 3 3 #"can"
 0 0 17 3 1 #" "
@@ -365,16 +366,13 @@
 0 0 17 3 1 #" "
 0 0 17 3 8 #"whatever"
 0 0 17 3 1 #" "
-0 0 17 3 3 #"you"
-0 0 17 3 1 #" "
-0 0 17 3 4 #"want"
-0 0 17 3 45 #" with this stuff. If we meet some day, and ;;"
+0 0 17 3 53 #"you want with this stuff. If we meet some day, and ;;"
 0 0 22 29 1 #"\n"
-0 0 17 3 6 #";; you"
-0 0 17 3 1 #" "
-0 0 17 3 10 #"think this"
-0 0 17 3 55 #" stuff is worth it, you can buy me a beer.           ;;"
-0 0 22 29 1 #"\n"
+0 0 17 3 72
+(
+ #";; you think this stuff is worth it, you can buy me a beer.         "
+ #"  ;;"
+) 0 0 22 29 1 #"\n"
 0 0 17 3 72
 (
  #";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
@@ -512,10 +510,8 @@
 ) 0 0 17 3 1 #" "
 0 0 17 3 2 #"or"
 0 0 17 3 1 #" "
-0 0 17 3 3 #"not"
-0 0 17 3 1 #" "
-0 0 17 3 3 #"the"
-0 0 17 3 56 #" game is paused, the current tick count(time basically),"
+0 0 17 3 63
+#"not the game is paused, the current tick count(time basically),"
 0 0 22 29 1 #"\n"
 0 0 17 3 54 #";; and a list of keys that are currently being pressed"
 0 0 22 29 1 #"\n"
@@ -72419,6 +72415,8 @@
  #";; Calls the move-bullets function on every bullet in given bullet-l"
  #"ist"
 ) 0 0 22 29 1 #"\n"
+0 0 17 3 24 #";; UPDATE: Now using map"
+0 0 22 29 1 #"\n"
 0 0 22 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 22 3 2 #" ("
@@ -72448,10 +72446,8 @@
 0 0 17 3 13 #"move-bullet ("
 0 0 17 3 5 #"first"
 0 0 17 3 1 #" "
-0 0 17 3 11 #"bullet-list"
-0 0 17 3 4 #")) ("
-0 0 17 3 22 #"update-bullet-position"
-0 0 17 3 23 #" (rest bullet-list)))))"
+0 0 17 3 60
+#"bullet-list)) (update-bullet-position (rest bullet-list)))))"
 0 0 22 29 1 #"\n"
 0 0 22 29 1 #"\n"
 0 0 17 3 32 #";; destroy-bullets: List -> List"
@@ -73292,6 +73288,8 @@
  #";; If the list isn't empty, place-image the first of bullet-list ont"
  #"o draw-bullets of the rest of bullet-list."
 ) 0 0 22 29 1 #"\n"
+0 0 17 3 26 #";; UPDATE: Now using foldr"
+0 0 22 29 1 #"\n"
 0 0 22 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 22 3 2 #" ("
@@ -73311,10 +73309,7 @@
 0 0 22 3 2 #"))"
 0 0 22 29 1 #"\n"
 0 0 22 3 2 #"  "
-0 0 17 3 4 #";(if"
-0 0 17 3 2 #" ("
-0 0 17 3 6 #"empty?"
-0 0 17 3 14 #" bullet-list) "
+0 0 17 3 26 #";(if (empty? bullet-list) "
 0 0 22 29 1 #"\n"
 0 0 22 3 6 #"      "
 0 0 17 3 13 #";SPACE-IMAGE "
@@ -73359,12 +73354,16 @@
 0 0 17 3 1 #" "
 0 0 17 3 11 #"bullet-list"
 0 0 17 3 4 #")) ("
-0 0 17 3 12 #"draw-bullets"
-0 0 17 3 2 #" ("
-0 0 17 3 4 #"rest"
-0 0 17 3 17 #" bullet-list)))))"
+0 0 17 3 35 #"draw-bullets (rest bullet-list)))))"
 0 0 22 29 1 #"\n"
 0 0 22 29 1 #"\n"
+0 0 17 3 38 #";; draw-bullet: Bullet, Image -> Image"
+0 0 22 29 1 #"\n"
+0 0 17 3 71
+(
+ #";; Places the given bullet onto the given image at the bullets x and"
+ #" y."
+) 0 0 22 29 1 #"\n"
 0 0 22 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 22 3 2 #" ("
